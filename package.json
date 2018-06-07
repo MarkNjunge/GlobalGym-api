@@ -1,0 +1,17 @@
+{
+  "name": "express-sql-js",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "author": "Mark Njung'e",
+  "license": "MIT",
+  "scripts": {
+    "start": "node lib/app.js",
+    "server": "nodemon lib/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.4"
+  }
+}
