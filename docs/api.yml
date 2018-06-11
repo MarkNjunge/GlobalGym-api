@@ -7,6 +7,212 @@ GlobalGym API
 
 # Group User
 
+## Get all users [/users]
+
+### Get all users [GET]
+
+Returns a list of all users.
+
++ Response 200 (application/json)
+
+  An array of all users
+
+    + Body
+
+      [
+        {
+          "userId": "5b195351a3eff05d10ecb457",
+          "firstName": "Mark",
+          "lastName": "Kamau",
+          "email": "mark@mail.com",
+          "phone": "0724721377",
+          "profilePhoto": "any",
+          "yearOfBirth": 1998,
+          "gender": "M",
+          "country": "Kenya",
+          "weight": 60,
+          "targetWeight": 70
+        }
+      ]
+
++ Response 500 (application/json)
+
+  A server related error.
+
+    + Body
+
+      {
+        "message": "An error has occurred."
+      }
+
+## Get a user [/users/{id}]
+
+### Get a user [GET]
+
+Returns a single user.
+
++ Parameters
+  + id (string)
+    The id of the user
+
++ Response 200 (application/json)
+
+  The user.
+
+    + Body
+
+      {
+        "userId": "5b195351a3eff05d10ecb457",
+        "firstName": "Mark",
+        "lastName": "Kamau",
+        "email": "mark@mail.com",
+        "phone": "0724721377",
+        "profilePhoto": "any",
+        "yearOfBirth": 1998,
+        "gender": "M",
+        "country": "Kenya",
+        "weight": 60,
+        "targetWeight": 70
+      }
+
++ Response 404 (application/json)
+
+  There is no user with that id.
+
+    + Body
+
+      {
+        "message": "There is no user with that id."
+      }
+
++ Response 500 (application/json)
+
+  A server related error.
+
+    + Body
+
+      {
+        "message": "An error has occurred."
+      }
+
+
+## Register a user [/users/register]
+
+### Register a user [POST]
+
+Register a user.
+
++ Request
+
+      {
+      "userId":"abc",
+        "firstName": "Mark",
+        "lastName": "Kamau",
+        "email": "mark@mail.com",
+        "phone": "0724721377",
+        "profilePhoto": "any",
+        "yearOfBirth": 1998,
+        "gender": "M",
+        "country": "Kenya",
+        "weight": 60,
+        "targetWeight": 70
+    }
+
++ Response 201 (application/json)
+
+  The user.
+
+    + Body
+
+      {
+        "userId": "5b195351a3eff05d10ecb457",
+        "firstName": "Mark",
+        "lastName": "Kamau",
+        "email": "mark@mail.com",
+        "phone": "0724721377",
+        "profilePhoto": "any",
+        "yearOfBirth": 1998,
+        "gender": "M",
+        "country": "Kenya",
+        "weight": 60,
+        "targetWeight": 70
+      }
+
++ Response 403 (application/json)
+
+  A user already exists.
+
+    + Body
+
+      {
+          "message": "E11000 duplicate key error collection: global_gym.users_91372 index: userId_1 dup key: { : \"abc\" }"
+      }
+
++ Response 500 (application/json)
+
+  A server related error.
+
+    + Body
+
+      {
+        "message": "An error has occurred."
+      }
+
+
+## Update a user [/users/update]
+
+### Update a user [POST]
+
+Update a user.
+
++ Request (application/json)
+
+  + Attributes
+      + userId: abc (string, required)
+      + firstName : Mark (string)
+      + lastName: Kamau (string)
+      + email: mark@mail.com (string)
+      + phone: 0724721377 (string)
+      + profilePhoto: https://via.placeholder.com/350x350 (string)
+      + yearOfBirth: 1998 (number)
+      + gender: M (string)
+      + country: Kenya (string)
+      + weight: 60 (number)
+      + targetWeight: 7 (number)
+
+  + Body
+      {
+        "userId":"abc",
+        "firstName": "Mark",
+        "lastName": "Kamau",
+        "email": "mark@mail.com",
+        "phone": "0724721377",
+        "profilePhoto": "any",
+        "yearOfBirth": 1998,
+        "gender": "M",
+        "country": "Kenya",
+        "weight": 60,
+        "targetWeight": 70
+      }
+
++ Response 200 (application/json)
+
+    + Body
+
+      {
+          "message": "User updated."
+      }
+
++ Response 500 (application/json)
+
+  A server related error.
+
+    + Body
+
+      {
+        "message": "An error has occurred."
+      }
+
 # Group Inscructor
 
 # Group Gym
