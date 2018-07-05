@@ -2,6 +2,8 @@
 
 GlobalGym is an app that allows users to access any member gym across Africa.
 
+See Android app: [Global Gym - Android](https://github.com/MarkNjunge/GlobalGym-Android)
+
 **NB: GlobalGym was created as a school project. It is not used in production.**
 
 ## Requirements
