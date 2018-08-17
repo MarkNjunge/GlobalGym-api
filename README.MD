@@ -23,4 +23,4 @@ Start the api using `yarn start` or `yarn server` for a live reloading version (
 
 ## Documentation
 
-Once the server is running, documentation for the routes can be viewed at `localhost:3000/docs`. **Needs updating**
+**Needs updating**
