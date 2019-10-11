@@ -26,6 +26,10 @@ patch:
         patched: '2019-10-11T13:22:29.754Z'
     - firebase-admin > @google-cloud/firestore > google-gax > google-auth-library > gcp-metadata > gaxios > https-proxy-agent:
         patched: '2019-10-11T13:22:29.754Z'
+    - firebase-admin > @google-cloud/storage > gaxios > https-proxy-agent:
+        patched: '2019-10-11T13:32:36.906Z'
   SNYK-JS-LODASH-450202:
     - firebase-admin > @google-cloud/storage > async > lodash:
         patched: '2019-10-11T13:22:29.754Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-11T13:32:36.906Z'
